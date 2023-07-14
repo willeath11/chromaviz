@@ -89,5 +89,6 @@ def visualize_collection(col: chromadb.api.models.Collection.Collection):
     global data
     data = col.get(include=["documents", "metadatas", "embeddings"])
     #webbrowser.open('http://0.0.0.0:5000')   
+    print("Starting Flask chromaviz server")
     app.run(host='0.0.0.0', port=5000,debug=False)
     return
